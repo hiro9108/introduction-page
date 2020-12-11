@@ -29,14 +29,21 @@ ul {
   list-style: none;
 }
 
-h1 {
-  color: white;
+h1,
+h2 {
+  text-transform: uppercase;
 }
 
 header,
 main,
 footer {
   padding: 0 calc(100vw / 25);
+}
+
+.section-works,
+.section-skills,
+.section-profile {
+  margin-top: 32px;
 }
 
 /* header */
@@ -68,6 +75,7 @@ header .logo {
 header .header-nav {
   display: flex;
   align-items: center;
+  text-transform: uppercase; /* Check later */
 }
 
 header .header-nav li:not(:last-of-type) {
@@ -81,17 +89,130 @@ header .title {
 
 /* main */
 main {
-  height: 100vh;
 }
 
 /* section works */
 .section-works {
 }
 
-.section-works .row {
+.section-works .row:nth-child(1) {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section-works .row:nth-child(2) {
+  height: 50vh;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.section-works .column {
+  margin: 18px 0;
+  width: 300px;
+  border-radius: 18px;
+  background-color: rgb(54, 54, 54);
+  position: relative;
+}
+
+.section-works .column::before {
+  position: absolute;
+  content: "";
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 18px;
+  background-color: white;
+  z-index: -1;
+}
+
+.section-works .column::after {
+  position: absolute;
+  content: "";
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 18px;
+  background-color: white;
+  z-index: -2;
+  filter: blur(10px);
+}
+
+.section-works .column::before,
+.section-works .column::after {
+  background: linear-gradient(
+    235deg,
+    /* rgba(61, 255, 54, 0.7), */ rgba(235, 62, 91, 0.7),
+    rgb(54, 54, 54),
+    rgba(235, 62, 91, 0.7)
+  );
+}
+
+.section-works .column .work-image {
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.section-works .column .work-image .work-01 {
+  width: 100%;
+}
+
+.section-works .column .content {
   display: flex;
   flex-direction: column;
+}
+
+.section-works .column .content h3 {
+  margin: 18px 0;
+  align-self: center;
+}
+
+.section-works .column .content a.btn {
+  border: 1px solid white;
+  margin: 18px 0;
+  align-self: flex-end;
+  border-radius: 18px;
+  padding: 9px;
+}
+
+/* section skills */
+.section-skills {
+}
+
+.section-skills .row:nth-child(1) {
+  display: flex;
   align-items: center;
+  flex-direction: column;
+}
+
+.section-skills .row:nth-child(2) {
+  height: 50vh;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.section-skills .column {
+  background-color: red;
+}
+
+/* section profile */
+.section-profile {
+}
+
+.section-profile .row:nth-child(1) {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section-profile .row:nth-child(2) {
+  height: 50vh;
 }
 
 /* footer */
