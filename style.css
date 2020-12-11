@@ -108,8 +108,8 @@ main {
 }
 
 .section-works .column {
-  margin: 18px 0;
   width: 300px;
+  margin: 18px 0;
   border-radius: 18px;
   background-color: rgb(54, 54, 54);
   position: relative;
@@ -190,14 +190,34 @@ main {
 }
 
 .section-skills .row:nth-child(2) {
-  height: 50vh;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
 }
 
 .section-skills .column {
-  background-color: red;
+  width: 300px;
+  padding: 9px;
+  margin: 18px 0;
+  border-radius: 9px;
+  text-align: center;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.596),
+    rgba(59, 59, 59, 0.103),
+    rgba(0, 0, 0, 0.596)
+  );
+}
+
+.section-skills .column .percentage {
+  /* Check later about percentage margin */
+  width: 100px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 9px;
+  background: linear-gradient(to right, white, red);
+  /* animation: ease-in-out 10s; */
 }
 
 /* section profile */
