@@ -115,6 +115,11 @@ main {
   position: relative;
 }
 
+.section-works .column:hover {
+  transform: translateY(-10px);
+  transition: transform 0.3s;
+}
+
 .section-works .column::before {
   position: absolute;
   content: "";
@@ -208,17 +213,41 @@ main {
     rgba(59, 59, 59, 0.103),
     rgba(0, 0, 0, 0.596)
   );
+  display: flex;
+  align-items: center;
+}
+
+.section-skills .column .skill-name {
+  width: 110px;
+  text-align: center;
+}
+
+.section-skills .column .percent-value {
+  width: 40px;
+  text-align: left;
 }
 
 .section-skills .column .percentage {
   /* Check later about percentage margin */
-  width: 100px;
+  width: calc(100% - 150px);
   height: 10px;
-  display: inline-block;
+  margin-right: 4px;
+  border-radius: 9px;
+  background: linear-gradient(to right, rgb(141, 141, 141), rgb(63, 63, 63));
+}
+
+.section-skills .column .progress {
+  height: 10px;
   border-radius: 9px;
   background: linear-gradient(to right, white, red);
-  /* animation: ease-in-out 10s; */
+  /* animation: animate 2s ease-in-out forwards; */
 }
+
+/* @keyframes animate {
+  from {
+    width: 0;
+  }
+} */
 
 /* section profile */
 .section-profile {
